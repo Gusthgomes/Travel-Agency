@@ -1,10 +1,15 @@
+import { Header } from "components"
 
 const Dashboard = () => {
+
+    const user = { name: "Gusth " }
     return (
-        <div className="flex flex-col gap-4 p-4">
-            <h1 className="text-2xl font-bold">Dashboard</h1>
-            <p>Welcome to the admin dashboard!</p>
-        </div>
+        <main className="dashboard wrapper">
+            <Header
+                title={`Olá ${user?.name ?? 'Guest'} 👋`}
+                description="Acompanhe atividades, tendências e destinos populares em tempo real"
+            />
+        </main>
     )
 }
 
